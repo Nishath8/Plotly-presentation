@@ -1,0 +1,25 @@
+---
+title: "Interactive Plotly Presentation"
+author: "Nishath Anjum P"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+# 📌 Introduction
+This presentation was created for the Coursera Peer-graded assignment:  
+**R Markdown Presentation & Plotly**.  
+It includes today's date and an interactive Plotly chart.
+
+# 📊 Interactive Plot using Plotly
+
+```{r plotly, echo=FALSE}
+library(plotly)
+
+# Sample Plotly graph
+data <- data.frame(
+  Category = c("A", "B", "C", "D"),
+  Values = c(20, 40, 15, 30)
+)
+
+fig <- plot_ly(data, x = ~Category, y = ~Values, type = "bar")
+fig
